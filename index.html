@@ -4,69 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Pau Juárez Carrillo</title>
+
+    <!-- Incluir Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Barra de navegación -->
-    <nav>
-        <ul>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+    <!-- Barra de navegación con Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Pau Juárez Carrillo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#habilidades">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <!-- Contenedor principal -->
     <main>
         <!-- Sección de Sobre mí -->
-        <section id="sobre-mi">
+        <section id="sobre-mi" class="pt-5">
             <div class="container">
-                <div class="informacion">
+                <div class="informacion text-center">
                     <h1 id="nombre">Pau Juárez Carrillo</h1>
                     <p id="descripcion">Programador</p>
-                    <img src="profile.jpg" alt="Foto de Pau Juárez Carrillo" class="profile-image">
+                    <img src="profile.jpg" alt="Foto de Pau Juárez Carrillo" class="profile-image rounded-circle mb-4" style="width: 200px; height: 200px;">
                 </div>
                 <div class="habilidades">
                     <h2>Habilidades</h2>
+                    <br>
                     <div id="lista-habilidades" class="grid-habilidades"></div>
                 </div>
             </div>
         </section>
 
         <!-- Sección de Proyectos -->
-        <section id="proyectos">
-            <div class="container">
-                <h2>Proyectos</h2>
+        <section id="proyectos" class="py-5">
+            <div class="container text-center">
+                <h2 id="pj">Proyectos</h2>
                 <div id="lista-proyectos" class="grid-proyectos"></div>
             </div>
         </section>
 
         <!-- Sección de Contacto -->
-        <section id="contacto">
+        <section id="contacto" class="py-5">
             <div class="container">
                 <h2>Contacto</h2>
                 <form id="contact-form">
-                    <label for="nombre-contacto">Nombre:</label>
-                    <input type="text" id="nombre-contacto" required>
-
-                    <label for="email-contacto">Correo:</label>
-                    <input type="email" id="email-contacto" required>
-
-                    <label for="mensaje-contacto">Mensaje:</label>
-                    <textarea id="mensaje-contacto" required></textarea>
-
-                    <button type="submit">Enviar</button>
+                    <div class="mb-3">
+                        <label for="nombre-contacto" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre-contacto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email-contacto" class="form-label">Correo:</label>
+                        <input type="email" class="form-control" id="email-contacto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje-contacto" class="form-label">Mensaje:</label>
+                        <textarea class="form-control" id="mensaje-contacto" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Enviar</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="text-center py-4">
         <p>© 2025 Pau Juárez Carrillo | Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Incluir Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

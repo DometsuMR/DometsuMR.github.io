@@ -19,20 +19,20 @@ nav {
     left: 0;
     width: 100%;
     background-color: #333;
-    padding: 20px;
-    z-index: 1fff;
+    padding: 15px 0;
+    z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     list-style: none;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -41,16 +41,10 @@ nav ul li a {
     font-weight: bold;
     font-size: 18px;
     transition: color 0.3s;
-    text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14;
 }
 
 nav ul li a:hover {
-    color: #39FF14; /* Color neón */
-}
-
-/* Efecto de brillo moderado en el texto */
-h1, h2, p {
-    text-shadow: 0 0 3px #39FF14, 0 0 5px #39FF14;
+    color: #39FF14;
 }
 
 /* Sección principal */
@@ -59,16 +53,13 @@ main {
     padding-bottom: 50px;
 }
 
-section {
-    margin: 30px 0;
-}
-
 /* Sección de Sobre mí y habilidades */
 #sobre-mi .container {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 40px;
     align-items: center;
+    margin-bottom: 60px;  /* Añadido margen inferior */
 }
 
 .informacion {
@@ -89,18 +80,32 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
-    border: 2px solid transparent; /* Base para el borde animado */
-    animation: border-circle 3s infinite linear;
 }
 
-/* Animación de neón (brillo más suave) */
-@keyframes neon {
+.habilidades h2 {
+    margin-bottom: 20px;
+}
+
+/* Animación de neón (solo para contenedor global) */
+@keyframes neon-border {
     0% {
-        text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14;
+        border-color: #7B39FF;
+        box-shadow: 0 0 10px #7B39FF, 0 0 20px #7B39FF;
+    }
+    50% {
+        border-color: #39FF14;
+        box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
     }
     100% {
-        text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+        border-color: #0d99ff;
+        box-shadow: 0 0 10px #0d99ff, 0 0 20px #0d99ff;
     }
+}
+
+.habilidades,
+.proyecto {
+    border: 2px solid transparent;
+    animation: neon-border 3s infinite linear;
 }
 
 /* Estilos de habilidades en grid */
@@ -117,8 +122,6 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
-    border: 2px solid transparent; /* Base para el borde animado */
-    animation: border-circle 3s infinite linear;
 }
 
 .habilidad p {
@@ -133,7 +136,7 @@ section {
 }
 
 .barra-progreso {
-    background-color: #39FF14; /* Color verde neón */
+    background-color: #39FF14;
     height: 10px;
     border-radius: 5px;
 }
@@ -141,11 +144,16 @@ section {
 /* Estilos de proyectos */
 #proyectos .container {
     text-align: center;
+    margin-bottom: 60px;  /* Añadido margen inferior */
+}
+
+#pj{
+    padding-bottom: 2%;
 }
 
 .grid-proyectos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -157,52 +165,18 @@ section {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid transparent; /* Base para el borde animado */
-    animation: border-circle 3s infinite linear;
 }
 
 .proyecto:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.5); /* Efecto neón */
-}
-
-/* Borde animado en los proyectos y habilidades */
-@keyframes border-circle {
-    0% {
-        border-color: #39FF14; /* Inicia con verde neón */
-        box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
-    }
-    50% {
-        border-color: #fff00F; /* Cambia a verde azulado */
-        box-shadow: 0 0 10px #fff00F, 0 0 20px #fff00F;
-    }
-    100% {
-        border-color: #39FF14; /* Vuelve a verde neón */
-        box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
-    }
-}
-
-.proyecto img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.proyecto a {
-    display: block;
-    margin-top: 10px;
-    color: #39FF14;
-    text-decoration: none;
-}
-
-.proyecto a:hover {
-    text-decoration: underline;
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.5);
 }
 
 /* Formulario */
 form {
     display: grid;
     gap: 15px;
+    margin-top: 30px;  /* Añadido margen superior */
 }
 
 form input, form textarea {
@@ -228,6 +202,7 @@ form button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 form button:hover {
@@ -258,9 +233,20 @@ form input:focus, form textarea:focus {
 }
 
 /* Responsive */
+
+/* Barra de navegación */
 @media (max-width: 768px) {
+    
+#pj{
+    padding-bottom: 6%;
+}
     nav ul {
-        grid-template-columns: 1fr 1fr;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
     }
 
     .container {
@@ -272,7 +258,47 @@ form input:focus, form textarea:focus {
         height: 150px;
     }
 
+    .grid-habilidades {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-proyectos {
+        grid-template-columns: 1fr;
+    }
+
     form input, form textarea {
         width: 100%;
+    }
+}
+
+/* Pantalla pequeña */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .informacion img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .habilidades, .proyecto {
+        padding: 20px;
+    }
+
+    .grid-habilidades {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    form input, form textarea {
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 16px;
     }
 }
