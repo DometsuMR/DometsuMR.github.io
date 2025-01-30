@@ -18,53 +18,56 @@
         </ul>
     </nav>
 
-    <!-- Sección de Sobre mí -->
-    <section id="sobre-mi">
-        <div class="container">
-            <h1 id="nombre">Pau Juárez Carrillo</h1>
-            <p id="descripcion">Programador</p>
-            <img src="profile.jpg" alt="Foto de Pau Juárez Carrillo" class="profile-image">
-        </div>
-    </section>
+    <!-- Contenedor principal -->
+    <main>
+        <!-- Sección de Sobre mí -->
+        <section id="sobre-mi">
+            <div class="container">
+                <h1 id="nombre">Pau Juárez Carrillo</h1>
+                <p id="descripcion">Programador</p>
+                <img src="profile.jpg" alt="Foto de Pau Juárez Carrillo" class="profile-image">
+            </div>
+        </section>
 
-    <!-- Sección de Habilidades -->
-    <section id="habilidades">
-        <h2>Habilidades</h2>
-        <div id="lista-habilidades">
-            <!-- Habilidades cargadas dinámicamente -->
-        </div>
-    </section>
+        <!-- Sección de Habilidades -->
+        <section id="habilidades">
+            <div class="container">
+                <h2>Habilidades</h2>
+                <div id="lista-habilidades"></div>
+            </div>
+        </section>
 
-    <!-- Sección de Proyectos -->
-    <section id="proyectos">
-        <h2>Proyectos</h2>
-        <div id="lista-proyectos">
-            <!-- Proyectos cargados dinámicamente -->
-        </div>
-    </section>
+        <!-- Sección de Proyectos -->
+        <section id="proyectos">
+            <div class="container">
+                <h2>Proyectos</h2>
+                <div id="lista-proyectos"></div>
+            </div>
+        </section>
 
-    <!-- Sección de Contacto -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <form id="contact-form">
-            <label for="nombre-contacto">Nombre:</label>
-            <input type="text" id="nombre-contacto" required>
+        <!-- Sección de Contacto -->
+        <section id="contacto">
+            <div class="container">
+                <h2>Contacto</h2>
+                <form id="contact-form">
+                    <label for="nombre-contacto">Nombre:</label>
+                    <input type="text" id="nombre-contacto" required>
 
-            <label for="email-contacto">Correo:</label>
-            <input type="email" id="email-contacto" required>
+                    <label for="email-contacto">Correo:</label>
+                    <input type="email" id="email-contacto" required>
 
-            <label for="mensaje-contacto">Mensaje:</label>
-            <textarea id="mensaje-contacto" required></textarea>
+                    <label for="mensaje-contacto">Mensaje:</label>
+                    <textarea id="mensaje-contacto" required></textarea>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>© 2025 Pau Juárez Carrillo | Todos los derechos reservados.</p>
     </footer>
-
-    <button id="toggle-mode">🌙 Modo Oscuro</button>
 
     <script src="js/script.js"></script>
 </body>

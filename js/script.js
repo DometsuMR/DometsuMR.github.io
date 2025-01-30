@@ -1,8 +1,7 @@
 // Cargar el archivo JSON
 fetch('/js/jsno/data.json')
-    .then(response => response.json())  // Parsear la respuesta como JSON
+    .then(response => response.json())
     .then(data => {
-        // Cargar datos dinámicamente
         document.getElementById("nombre").textContent = data.nombre;
         document.getElementById("descripcion").textContent = data.descripcion;
 
@@ -33,18 +32,7 @@ fetch('/js/jsno/data.json')
             `;
         });
         document.getElementById("lista-proyectos").innerHTML = proyectosHTML;
-
-    })
-    .catch(error => {
-        console.error('Error al cargar el archivo JSON:', error);
     });
-
-// Modo oscuro
-const toggleButton = document.getElementById("toggle-mode");
-toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    toggleButton.textContent = document.body.classList.contains("dark-mode") ? "☀️ Modo Claro" : "🌙 Modo Oscuro";
-});
 
 // Formulario de contacto (simulado)
 document.getElementById("contact-form").addEventListener("submit", (e) => {
