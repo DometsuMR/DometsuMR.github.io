@@ -1,20 +1,3 @@
-// Datos de ejemplo (para carga dinámica)
-const data = {
-    nombre: "Juan Pérez",
-    descripcion: "Desarrollador Web Full Stack con pasión por crear experiencias interactivas.",
-    habilidades: [
-        { nombre: "HTML", nivel: 90 },
-        { nombre: "CSS", nivel: 85 },
-        { nombre: "JavaScript", nivel: 80 },
-        { nombre: "React", nivel: 70 },
-        { nombre: "Node.js", nivel: 60 }
-    ],
-    proyectos: [
-        { nombre: "Tienda Online", descripcion: "E-commerce con React y Firebase", imagen: "proyecto1.jpg", enlace: "https://github.com/juanperez/tienda-online" },
-        { nombre: "Aplicación de Tareas", descripcion: "Aplicación de gestión de tareas con Node.js y MongoDB", imagen: "proyecto2.jpg", enlace: "https://github.com/juanperez/tareas" }
-    ]
-};
-
 // Cargar datos dinámicamente
 document.getElementById("nombre").textContent = data.nombre;
 document.getElementById("descripcion").textContent = data.descripcion;
