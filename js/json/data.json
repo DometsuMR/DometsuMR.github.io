@@ -1,13 +1,16 @@
 {
-    "nombre": "Juan Pérez",
-    "descripcion": "Desarrollador Web Full Stack",
-    "contacto": "mailto:juanperez@example.com",
+    "nombre": "Pau Juárez",
+    "descripcion": "Programador.",
     "habilidades": [
         { "nombre": "HTML", "nivel": 90 },
         { "nombre": "CSS", "nivel": 85 },
-        { "nombre": "JavaScript", "nivel": 80 }
+        { "nombre": "JavaScript", "nivel": 80 },
+        { "nombre": "Java", "nivel": 70 },
+        { "nombre": "Python", "nivel": 60 },
+        { "nombre": "C#", "nivel": 65 }
     ],
     "proyectos": [
-        { "nombre": "Tienda Online", "descripcion": "E-commerce con React y Firebase" }
+        { "nombre": "Tienda Online", "descripcion": "E-commerce con React y Firebase", "imagen": "proyecto1.jpg", "enlace": "https://github.com/juanperez/tienda-online" },
+        { "nombre": "Aplicación de Tareas", "descripcion": "Aplicación de gestión de tareas con Node.js y MongoDB", "imagen": "proyecto2.jpg", "enlace": "https://github.com/juanperez/tareas" }
     ]
 }

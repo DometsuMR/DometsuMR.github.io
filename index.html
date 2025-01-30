@@ -3,29 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Dinámico</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Portafolio de Juan Pérez</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1 id="nombre">Cargando...</h1>
-        <p id="descripcion">...</p>
-        <button id="toggle-mode">🌙 Modo Oscuro</button>
-    </header>
 
-    <section id="habilidades">
-        <h2>Habilidades</h2>
-        <div id="lista-habilidades"></div>
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Sobre mí -->
+    <section id="sobre-mi">
+        <div class="container">
+            <h1 id="nombre">Juan Pérez</h1>
+            <p id="descripcion">Desarrollador Web Full Stack con pasión por crear experiencias interactivas.</p>
+            <img src="profile.jpg" alt="Foto de Juan Pérez" class="profile-image">
+        </div>
     </section>
 
+    <!-- Sección de Habilidades -->
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <div id="lista-habilidades">
+            <!-- Habilidades cargadas dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Sección de Proyectos -->
     <section id="proyectos">
         <h2>Proyectos</h2>
-        <div id="lista-proyectos"></div>
+        <div id="lista-proyectos">
+            <!-- Proyectos cargados dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="contact-form">
+            <label for="nombre-contacto">Nombre:</label>
+            <input type="text" id="nombre-contacto" required>
+
+            <label for="email-contacto">Correo:</label>
+            <input type="email" id="email-contacto" required>
+
+            <label for="mensaje-contacto">Mensaje:</label>
+            <textarea id="mensaje-contacto" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
     <footer>
-        <p>Contacto: <a id="contacto" href="#">...</a></p>
+        <p>© 2025 Juan Pérez | Todos los derechos reservados.</p>
     </footer>
-    <script src="/js/script.js"></script>
+
+    <button id="toggle-mode">🌙 Modo Oscuro</button>
+
+    <script src="script.js"></script>
 </body>
 </html>

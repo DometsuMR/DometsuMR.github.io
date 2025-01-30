@@ -1,61 +1,130 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    text-align: center;
-    background: #f4f4f4;
+    background-color: #f4f4f4;
     padding: 20px;
-    transition: background 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
-header {
+
+/* Barra de navegación */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Estilos de las secciones */
+section {
+    margin-top: 70px;
+    padding: 30px 0;
+}
+
+#sobre-mi {
     background: #333;
     color: white;
-    padding: 20px;
-    border-radius: 10px;
+    text-align: center;
 }
-#toggle-mode {
+
+#sobre-mi img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+}
+
+#habilidades {
+    background: #f9f9f9;
+}
+
+#proyectos {
     background: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
 }
-.habilidad {
-    margin: 10px 0;
-}
-.barra {
-    background: #ddd;
-    height: 20px;
-    width: 100%;
-    border-radius: 10px;
-    position: relative;
-}
-.barra-progreso {
-    height: 100%;
-    background: #4caf50;
-    width: 0;
-    border-radius: 10px;
-    transition: width 1s ease-in-out;
-}
+
 .proyecto {
     background: white;
-    padding: 15px;
-    margin: 15px;
+    padding: 20px;
+    margin: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
+
 .proyecto:hover {
     transform: scale(1.05);
 }
+
+/* Modo oscuro */
 .dark-mode {
     background: #222;
     color: #fff;
 }
-.dark-mode header {
-    background: #444;
+
+.dark-mode nav {
+    background-color: #444;
 }
+
 .dark-mode .proyecto {
     background: #333;
     color: white;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+#toggle-mode {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    #contact-form input, #contact-form textarea {
+        width: 100%;
+    }
 }
