@@ -1,0 +1,13 @@
+{
+    "nombre": "Juan Pérez",
+    "descripcion": "Desarrollador Web Full Stack",
+    "contacto": "mailto:juanperez@example.com",
+    "habilidades": [
+        { "nombre": "HTML", "nivel": 90 },
+        { "nombre": "CSS", "nivel": 85 },
+        { "nombre": "JavaScript", "nivel": 80 }
+    ],
+    "proyectos": [
+        { "nombre": "Tienda Online", "descripcion": "E-commerce con React y Firebase" }
+    ]
+}

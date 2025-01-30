@@ -1,0 +1,61 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+#toggle-mode {
+    background: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.habilidad {
+    margin: 10px 0;
+}
+.barra {
+    background: #ddd;
+    height: 20px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+.barra-progreso {
+    height: 100%;
+    background: #4caf50;
+    width: 0;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+.proyecto {
+    background: white;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.proyecto:hover {
+    transform: scale(1.05);
+}
+.dark-mode {
+    background: #222;
+    color: #fff;
+}
+.dark-mode header {
+    background: #444;
+}
+.dark-mode .proyecto {
+    background: #333;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
