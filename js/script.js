@@ -1,5 +1,5 @@
 // Cargar el archivo JSON
-fetch('js/jsno/data.json')
+fetch('js/json/data.json')
     .then(response => response.json())
     .then(data => {
         document.getElementById("nombre").textContent = data.nombre;
