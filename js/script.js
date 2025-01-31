@@ -34,8 +34,22 @@ fetch('js/json/data.json')
         document.getElementById("lista-proyectos").innerHTML = proyectosHTML;
     });
 
-// Formulario de contacto (simulado)
-document.getElementById("contact-form").addEventListener("submit", (e) => {
-    e.preventDefault();
-    alert("Mensaje enviado correctamente!");
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita que el formulario recargue la página
+
+    const formData = new FormData(this);
+
+    fetch("send_mail.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("respuesta").innerHTML = `<div class="alert alert-success">${data}</div>`;
+        this.reset();
+    })
+    .catch(error => {
+        document.getElementById("respuesta").innerHTML = `<div class="alert alert-danger">Error al enviar el mensaje.</div>`;
+        console.error("Error:", error);
+    });
 });
