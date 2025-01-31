@@ -35,21 +35,22 @@
         <section id="contacto">
             <div class="container">
                 <h2>Contacto</h2>
-                <form id="contact-form">
-                    <div class="mb-3">
-                        <label for="nombre-contacto" class="form-label">Nombre:</label>
-                        <input type="text" class="form-control" id="nombre-contacto" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email-contacto" class="form-label">Correo:</label>
-                        <input type="email" class="form-control" id="email-contacto" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="mensaje-contacto" class="form-label">Mensaje:</label>
-                        <textarea class="form-control" id="mensaje-contacto" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-success">Enviar</button>
-                </form>
+                    <form id="contact-form">
+                        <div class="mb-3">
+                            <label for="nombre-contacto" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre-contacto" name="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email-contacto" class="form-label">Correo:</label>
+                            <input type="email" class="form-control" id="email-contacto" name="correo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje-contacto" class="form-label">Mensaje:</label>
+                            <textarea class="form-control" id="mensaje-contacto" name="mensaje" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </form>
+                    <div id="respuesta"></div>
             </div>
         </section>
     </main>
