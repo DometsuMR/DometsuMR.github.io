@@ -6,7 +6,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     event.preventDefault(); // Prevenir que el formulario se envíe de forma tradicional
 
     // Usar EmailJS para enviar el formulario
-    emailjs.sendForm('tu_servicio', 'tu_plantilla', this)
+    emailjs.sendForm('service_l8juotg', 'template_80llqig', this)
         .then(function(response) {
             console.log("Mensaje enviado", response);
             document.getElementById('respuesta').textContent = "¡Mensaje enviado correctamente!";
