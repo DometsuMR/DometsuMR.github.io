@@ -35,21 +35,16 @@ fetch('js/json/data.json')
     });
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita que el formulario recargue la página
+    event.preventDefault();
 
-    const formData = new FormData(this);
-
-    fetch("send_mail.php", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("respuesta").innerHTML = `<div class="alert alert-success">${data}</div>`;
-        this.reset();
+    emailjs.sendForm("service_l8juotg", "template_e7rv45n", this, "EtE00FZeRLtEJmtsb")
+    .then(() => {
+        alert("Mensaje enviado correctamente.");
+        this.reset();  
     })
     .catch(error => {
-        document.getElementById("respuesta").innerHTML = `<div class="alert alert-danger">Error al enviar el mensaje.</div>`;
         console.error("Error:", error);
+        alert("Hubo un problema al enviar el mensaje.");
     });
 });
+
