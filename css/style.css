@@ -323,7 +323,7 @@ form input:focus, form textarea:focus {
 }
 /* Footer */
 footer {
-    
+    bottom: auto;
     background-color: #222;
     color: #fff;
     text-align: center;
