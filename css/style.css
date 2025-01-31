@@ -283,6 +283,10 @@ form input:focus, form textarea:focus {
     #proyectos .container {
         grid-template-columns: 1fr; /* Apilar proyectos en una columna */
     }
+    #contacto{
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
 }
 
 /* Pantalla pequeña */
@@ -314,6 +318,10 @@ form input:focus, form textarea:focus {
 
     form button {
         font-size: 16px;
+    }
+    #contacto{
+        padding-bottom: 5%;
+        padding-top: 5%;
     }
 }
 /* Footer */
