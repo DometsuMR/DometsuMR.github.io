@@ -36,8 +36,8 @@
       {
         "nombre": "Troll",
         "tier": 1,
-        "salud": 500,
-        "poder": 120,
+        "salud": 600,
+        "poder": 100,
         "habilidades": [
           { "nombre": "Golpe Pesado", "dano": 100, "energia": 10 },
           { "nombre": "Emboscada", "dano": 80, "energia": 8 }
@@ -48,6 +48,22 @@
           { "nombre": "Poción de Defensa", "cantidad": 1 }
         ],
         "imagen": "/img/troll.png"
+      },
+      {
+        "nombre": "Goblin",
+        "tier": 1,
+        "salud": 650,
+        "poder": 90,
+        "habilidades": [
+          { "nombre": "Golpe Suave", "dano": 50, "energia": 5 },
+          { "nombre": "Burlarse", "dano": 30, "energia": 3 }
+        ],
+        "tasaDrops": 0.5,
+        "objetosDrop": [
+          { "nombre": "Poción de Salud", "cantidad": 1 },
+          { "nombre": "Poción de Energía", "cantidad": 1 }
+        ],
+        "imagen": "/img/goblin.png"
       },
       {
         "nombre": "Troll",
@@ -66,6 +82,39 @@
         "imagen": "/img/troll.png"
       },
       {
+        "nombre": "Troll",
+        "tier": 3,
+        "salud": 1000,
+        "poder": 150,
+        "habilidades": [
+          { "nombre": "Golpe Pesado", "dano": 100, "energia": 10 },
+          { "nombre": "Emboscada", "dano": 80, "energia": 8 }
+        ],
+        "tasaDrops": 0.7,
+        "objetosDrop": [
+          { "nombre": "Poción de Poder", "cantidad": 1 },
+          { "nombre": "Poción de Defensa", "cantidad": 1 }
+        ],
+        "imagen": "/img/troll.png"
+      },
+      {
+        "nombre": "Dragón",
+        "tier": 4,
+        "salud": 1500,
+        "poder": 300,
+        "habilidades": [
+          { "nombre": "Aliento de Fuego", "dano": 250, "energia": 30 },
+          { "nombre": "Mordisco Mortal", "dano": 180, "energia": 20 }
+        ],
+        "tasaDrops": 0.9,
+        "objetosDrop": [
+          { "nombre": "Poción de Poder", "cantidad": 2 },
+          { "nombre": "Poción de Salud", "cantidad": 2 },
+          { "nombre": "Poción de Energía", "cantidad": 1 }
+        ],
+        "imagen": "/img/dragon.png"
+      },
+      {
         "nombre": "Dragón",
         "tier": 5,
         "salud": 1500,
@@ -80,7 +129,7 @@
           { "nombre": "Poción de Salud", "cantidad": 2 },
           { "nombre": "Poción de Energía", "cantidad": 1 }
         ],
-        "imagen": "/img/dragon.png"
+        "imagen": "/img/dragonbos.png"
       }
     ],
     "texto": {
