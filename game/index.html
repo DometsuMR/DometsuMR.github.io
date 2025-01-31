@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego por Turnos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu-principal">
+        <!-- Logo de la aplicación -->
+        <div id="logo-container">
+            <img src="/img/dome.png" alt="Logo del Juego" id="logo">
+        </div>
+        <div id="botones-menu">
+            <button onclick="iniciarJuego()">Jugar</button>
+            <button onclick="salirJuego()">Salir</button>
+        </div>
+    </div>
+
+    <div id="juego" class="oculto">
+        <!-- Recuadro de combate -->
+        <div id="recuadro-combate">
+            <!-- Enemigo -->
+            <div id="enemigo" class="lado enemigo">
+                <p id="salud-enemigo">500/500</p>
+                <div id="barra-enemigo" class="barra-salud"></div>
+                <img src="/img/dome.png" alt="Enemigo" class="imagen">
+            </div>
+
+            <!-- Personaje -->
+            <div id="personaje" class="lado personaje">
+                <img src="/img/dome.png" alt="Personaje" class="imagen">
+                <div id="barra-personaje" class="barra-salud"></div>
+                <p id="salud-personaje">1000/1000</p>
+            </div>
+        </div>
+
+        <div>        
+            <!-- Contador de enemigos eliminados -->
+            <div id="contador-enemigos" class="contador">
+                Enemigos eliminados: <span id="contador">0</span>
+            </div>
+        </div>
+
+        <!-- Contenedor con texto y acciones -->
+        <div id="contenedor-mensaje-acciones">
+            <!-- Espacio para mensaje de combate -->
+            <div id="mensaje" class="mensaje">
+                ¡Prepárate para la batalla!
+            </div>
+
+            <!-- Menú de acciones -->
+            <div id="menu-opciones">
+                <button onclick="atacar()">Atacar</button>
+                <button onclick="defender()">Defender</button>
+                <button onclick="habilidad()">Habilidad</button>
+                <button onclick="volverAlMenu()">Volver al menú</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

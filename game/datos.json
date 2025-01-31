@@ -1,0 +1,90 @@
+{
+    "personaje": {
+      "nombre": "Héroe",
+      "salud": 1000,
+      "poder": 150,
+      "energia": 100,
+      "habilidades": [
+        { "nombre": "Golpe Poderoso", "dano": 200, "energia": 20 },
+        { "nombre": "Defensa Rápida", "dano": 20, "energia": 10 },
+        { "nombre": "Lluvia de Meteoritos", "dano": 300, "energia": 50 }
+      ],
+      "inventario": [
+        { "nombre": "Poción de Salud", "cantidad": 1 },
+        { "nombre": "Poción de Poder", "cantidad": 1 },
+        { "nombre": "Poción de Energía", "cantidad": 1 }
+      ],
+      "imagen": "/img/dome.png"
+    },
+    "enemigos": [
+      {
+        "nombre": "Goblin",
+        "tier": 1,
+        "salud": 500,
+        "poder": 80,
+        "habilidades": [
+          { "nombre": "Golpe Suave", "dano": 50, "energia": 5 },
+          { "nombre": "Burlarse", "dano": 30, "energia": 3 }
+        ],
+        "tasaDrops": 0.5,
+        "objetosDrop": [
+          { "nombre": "Poción de Salud", "cantidad": 1 },
+          { "nombre": "Poción de Energía", "cantidad": 1 }
+        ],
+        "imagen": "/img/goblin.png"
+      },
+      {
+        "nombre": "Troll",
+        "tier": 1,
+        "salud": 500,
+        "poder": 120,
+        "habilidades": [
+          { "nombre": "Golpe Pesado", "dano": 100, "energia": 10 },
+          { "nombre": "Emboscada", "dano": 80, "energia": 8 }
+        ],
+        "tasaDrops": 0.7,
+        "objetosDrop": [
+          { "nombre": "Poción de Poder", "cantidad": 1 },
+          { "nombre": "Poción de Defensa", "cantidad": 1 }
+        ],
+        "imagen": "/img/troll.png"
+      },
+      {
+        "nombre": "Troll",
+        "tier": 2,
+        "salud": 800,
+        "poder": 120,
+        "habilidades": [
+          { "nombre": "Golpe Pesado", "dano": 100, "energia": 10 },
+          { "nombre": "Emboscada", "dano": 80, "energia": 8 }
+        ],
+        "tasaDrops": 0.7,
+        "objetosDrop": [
+          { "nombre": "Poción de Poder", "cantidad": 1 },
+          { "nombre": "Poción de Defensa", "cantidad": 1 }
+        ],
+        "imagen": "/img/troll.png"
+      },
+      {
+        "nombre": "Dragón",
+        "tier": 5,
+        "salud": 1500,
+        "poder": 300,
+        "habilidades": [
+          { "nombre": "Aliento de Fuego", "dano": 250, "energia": 30 },
+          { "nombre": "Mordisco Mortal", "dano": 180, "energia": 20 }
+        ],
+        "tasaDrops": 0.9,
+        "objetosDrop": [
+          { "nombre": "Poción de Poder", "cantidad": 2 },
+          { "nombre": "Poción de Salud", "cantidad": 2 },
+          { "nombre": "Poción de Energía", "cantidad": 1 }
+        ],
+        "imagen": "/img/dragon.png"
+      }
+    ],
+    "texto": {
+      "introduccion": "Bienvenido al mundo de combate. Tu objetivo es derrotar a tus enemigos y ganar fama. Usa tus habilidades con inteligencia y mejora tus recursos."
+    }
+  }
+  

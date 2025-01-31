@@ -10,7 +10,41 @@
         { "nombre": "C#", "nivel": 65 }
     ],
     "proyectos": [
-        { "nombre": "Tienda Online", "descripcion": "E-commerce con React y Firebase", "imagen": "proyecto1.jpg", "enlace": "https://github.com/DometsuMR/tienda-online" },
-        { "nombre": "Aplicación de Tareas", "descripcion": "Aplicación de gestión de tareas con Node.js y MongoDB", "imagen": "proyecto2.jpg", "enlace": "https://github.com/DometsuMR/tareas" }
+        { 
+            "nombre": "Juego Rogelite", 
+            "descripcion": "HTML, CSS, JS y JSON", 
+            "imagen": "/img/Rogelite.png", 
+            "enlace": "game/index.html" 
+        },
+        { 
+            "nombre": "Aplicación de Tareas", 
+            "descripcion": "Aplicación de gestión de tareas con Node.js y MongoDB", 
+            "imagen": "proyecto2.jpg", 
+            "enlace": "https://github.com/DometsuMR/tareas" 
+        },
+        { 
+            "nombre": "Portfolio Web", 
+            "descripcion": "Mi portafolio personal hecho con HTML, CSS y JavaScript", 
+            "imagen": "proyecto3.jpg", 
+            "enlace": "https://github.com/DometsuMR/portfolio" 
+        },
+        { 
+            "nombre": "Juego de Aventura", 
+            "descripcion": "Un juego en 2D desarrollado en Python con Pygame", 
+            "imagen": "proyecto4.jpg", 
+            "enlace": "https://github.com/DometsuMR/juego-aventura" 
+        },
+        { 
+            "nombre": "Sistema de Inventario", 
+            "descripcion": "Aplicación de escritorio con Java y MySQL para gestionar inventarios", 
+            "imagen": "proyecto5.jpg", 
+            "enlace": "https://github.com/DometsuMR/sistema-inventario" 
+        },
+        { 
+            "nombre": "Chat en Tiempo Real", 
+            "descripcion": "Aplicación de chat en tiempo real con WebSockets y Node.js", 
+            "imagen": "proyecto6.jpg", 
+            "enlace": "https://github.com/DometsuMR/chat-real-time" 
+        }
     ]
 }
