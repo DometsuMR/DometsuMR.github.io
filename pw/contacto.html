@@ -31,30 +31,30 @@
             </div>
         </div>
     </nav>
-        <!-- Sección de Contacto -->
-        <section id="contacto">
-            <div class="container">
-                <h2>Contacto</h2>
-                    <form id="contact-form">
-                        <div class="mb-3">
-                            <label for="nombre-contacto" class="form-label">Nombre:</label>
-                            <input type="text" class="form-control" name="nombre" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email-contacto" class="form-label">Correo:</label>
-                            <input type="email" class="form-control" name="correo" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="mensaje-contacto" class="form-label">Mensaje:</label>
-                            <textarea class="form-control" name="mensaje" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success">Enviar</button>
-                    </form>
 
-                    <div id="respuesta"></div>
-            </div>
-        </section>
-    </main>
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form id="contact-form">
+                <div class="mb-3">
+                    <label for="nombre-contacto" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email-contacto" class="form-label">Correo:</label>
+                    <input type="email" class="form-control" name="correo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje-contacto" class="form-label">Mensaje:</label>
+                    <textarea class="form-control" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Enviar</button>
+            </form>
+
+            <div id="respuesta"></div>
+        </div>
+    </section>
 
     <footer class="text-center py-4">
         <p>© 2025 Pau Juárez Carrillo | Todos los derechos reservados.</p>
@@ -65,10 +65,23 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         emailjs.init("EtE00FZeRLtEJmtsb");  // Reemplaza con tu Public Key
+
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevenir que el formulario se envíe de forma tradicional
+
+            // Usar EmailJS para enviar el formulario
+            emailjs.sendForm('tu_servicio', 'tu_plantilla', this)
+                .then(function(response) {
+                    console.log("Mensaje enviado", response);
+                    document.getElementById('respuesta').textContent = "¡Mensaje enviado correctamente!";
+                }, function(error) {
+                    console.log("Error al enviar el mensaje", error);
+                    document.getElementById('respuesta').textContent = "Hubo un problema al enviar el mensaje.";
+                });
+        });
     </script>
     
     <script src="script.js"></script>
-
 
 </body>
 </html>
