@@ -1,11 +1,17 @@
+// Inicializar EmailJS con tu Public Key
+emailjs.init("EtE00FZeRLtEJmtsb");  // Reemplaza con tu Public Key
+
+// Escuchar el evento de envío del formulario
 document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    
-    emailjs.sendForm("service_l8juotg", "template_e7rv45n", this, "EtE00FZeRLtEJmtsb")
+    event.preventDefault(); // Prevenir que el formulario se envíe de forma tradicional
+
+    // Usar EmailJS para enviar el formulario
+    emailjs.sendForm('tu_servicio', 'tu_plantilla', this)
         .then(function(response) {
-            document.getElementById("respuesta").innerText = "¡Mensaje enviado con éxito!";
+            console.log("Mensaje enviado", response);
+            document.getElementById('respuesta').textContent = "¡Mensaje enviado correctamente!";
         }, function(error) {
-            document.getElementById("respuesta").innerText = "Hubo un error al enviar el mensaje.";
-            console.error('Error al enviar el correo:', error);  // Detalles del error
+            console.log("Error al enviar el mensaje", error);
+            document.getElementById('respuesta').textContent = "Hubo un problema al enviar el mensaje.";
         });
 });
