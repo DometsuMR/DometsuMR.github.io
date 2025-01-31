@@ -17,16 +17,10 @@
             "enlace": "game/index.html" 
         },
         { 
-            "nombre": "Aplicación de Tareas", 
-            "descripcion": "Aplicación de gestión de tareas con Node.js y MongoDB", 
+            "nombre": "Desafio Diario", 
+            "descripcion": "Aplicación de reto fisico diario con HTML, CSS, JS y JSON ", 
             "imagen": "proyecto2.jpg", 
             "enlace": "https://github.com/DometsuMR/tareas" 
-        },
-        { 
-            "nombre": "Portfolio Web", 
-            "descripcion": "Mi portafolio personal hecho con HTML, CSS y JavaScript", 
-            "imagen": "proyecto3.jpg", 
-            "enlace": "https://github.com/DometsuMR/portfolio" 
         },
         { 
             "nombre": "Juego de Aventura", 
