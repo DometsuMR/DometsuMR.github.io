@@ -42,7 +42,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
             document.getElementById("respuesta").innerText = "¡Mensaje enviado con éxito!";
         }, function(error) {
             document.getElementById("respuesta").innerText = "Hubo un error al enviar el mensaje.";
-            console.log("Error al enviar el correo: ", error);
+            console.error('Error al enviar el correo:', error);  // Detalles del error
         });
 });
 
